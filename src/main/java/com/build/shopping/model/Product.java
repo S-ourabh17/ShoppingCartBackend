@@ -1,6 +1,7 @@
 package com.build.shopping.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Product {
     private Long id;
