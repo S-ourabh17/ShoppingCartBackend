@@ -6,6 +6,12 @@ import jakarta.persistence.ManyToOne;
 
 import java.sql.Blob;
 
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class Image {
     private Long id;
     private String fileName;
