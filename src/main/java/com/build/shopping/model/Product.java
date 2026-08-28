@@ -1,5 +1,8 @@
 package com.build.shopping.model;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
+
 import java.math.BigDecimal;
 import java.util.List;
 
