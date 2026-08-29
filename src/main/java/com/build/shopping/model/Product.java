@@ -1,6 +1,8 @@
 package com.build.shopping.model;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
 import java.math.BigDecimal;
