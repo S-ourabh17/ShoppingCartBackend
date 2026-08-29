@@ -13,6 +13,9 @@ public class Product {
     private BigDecimal price;
     private int  inventory;
     private String description;
+
+    @ManyToOne(cascade = CascadeType.ALL)                                                  // Owing Side
+    @JoinColumn(name= "category_id")                                                                         // Physical Foreign Key
     private Category category;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
