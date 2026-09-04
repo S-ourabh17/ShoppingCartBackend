@@ -10,7 +10,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class ProductService implements IProductService{
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
     @Override
     public Product addProduct(Product product) {
         return null;
