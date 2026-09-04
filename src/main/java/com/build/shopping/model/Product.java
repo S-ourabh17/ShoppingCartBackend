@@ -8,6 +8,10 @@ import jakarta.persistence.OneToMany;
 import java.math.BigDecimal;
 import java.util.List;
 
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
     private Long id;
     private String name;
