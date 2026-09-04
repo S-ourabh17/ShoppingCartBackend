@@ -3,6 +3,8 @@ package com.build.shopping.service.product;
 import com.build.shopping.exception.ProductNotFoundException;
 import com.build.shopping.model.Product;
 import com.build.shopping.repository.ProductRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
