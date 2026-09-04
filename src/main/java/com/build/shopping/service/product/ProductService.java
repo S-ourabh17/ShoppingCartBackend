@@ -64,7 +64,7 @@ public class ProductService implements IProductService{
     }
 
     @Override
-    public List<Product> countProductsByBrandAndName(String brand, String name) {
-        return List.of();
+    public Long countProductsByBrandAndName(String brand, String name) {
+        return productRepository.countByBrandAndName(brand, name);
     }
 }
