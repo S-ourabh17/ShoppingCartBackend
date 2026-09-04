@@ -7,7 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@RequiredArgsConstructor
+@Service
 public class ProductService implements IProductService{
     private ProductRepository productRepository;
     @Override
