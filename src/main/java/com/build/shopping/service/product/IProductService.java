@@ -7,7 +7,7 @@ import com.build.shopping.request.ProductUpdateRequest;
 import java.util.List;
 
 public interface IProductService {
-    Product addProduct(Product product);
+    Product addProduct(AddProductRequest product);
     Product getProductById(Long id);
     void deleteProductById(Long id);
     Product updateProduct(Product product, Long productId);
