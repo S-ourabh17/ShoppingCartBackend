@@ -5,6 +5,8 @@ import com.build.shopping.model.Category;
 import com.build.shopping.model.Product;
 import com.build.shopping.repository.CategoryRepository;
 import com.build.shopping.repository.ProductRepository;
+import com.build.shopping.request.AddProductRequest;
+import com.build.shopping.request.ProductUpdateRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
