@@ -14,3 +14,4 @@ spring:
         format_sql: true
     database: mysql
     database-platform: org.hibernate.dialect.MySQLDialect
+     api.prefix=/api/v1
