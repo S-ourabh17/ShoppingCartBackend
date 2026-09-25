@@ -36,6 +36,7 @@ public class Product {
     @JoinColumn(name= "category_id")                                                                         // Physical Foreign Key
     private Category category;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Image> images;
 
