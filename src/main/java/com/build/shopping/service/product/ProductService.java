@@ -11,6 +11,7 @@ import com.build.shopping.repository.ProductRepository;
 import com.build.shopping.request.AddProductRequest;
 import com.build.shopping.request.ProductUpdateRequest;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
