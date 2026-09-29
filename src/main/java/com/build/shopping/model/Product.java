@@ -34,7 +34,8 @@ public class Product {
 
     @JsonBackReference
     @ManyToOne(cascade = CascadeType.ALL)                                                  // Owing Side
-    @JoinColumn(name= "category_id")                                                                         // Physical Foreign Key
+    @JoinColumn(name= "category_id")                                                      // Physical Foreign Key
+    @JsonIgnore
     private Category category;
 
     @JsonManagedReference
