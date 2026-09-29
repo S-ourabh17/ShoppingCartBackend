@@ -17,6 +17,10 @@ import java.util.Optional;
 @Service
 public class ProductService implements IProductService{
     private final ProductRepository productRepository;
+    private final CategoryRepository categoryRepository;
+    private final ModelMapper modelMapper;
+    private final ImageRepository imageRepository;
+
     @Override
     public Product addProduct(Product product) {
         return null;
