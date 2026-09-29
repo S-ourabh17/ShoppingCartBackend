@@ -1,5 +1,7 @@
 package com.build.shopping.service.product;
 
+import com.build.shopping.dto.ImageDto;
+import com.build.shopping.dto.ProductDto;
 import com.build.shopping.exception.ProductNotFoundException;
 import com.build.shopping.model.Category;
 import com.build.shopping.model.Product;
