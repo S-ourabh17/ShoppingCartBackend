@@ -22,8 +22,23 @@ public class ProductService implements IProductService{
     private final ImageRepository imageRepository;
 
     @Override
-    public Product addProduct(Product product) {
-        return null;
+    public Product addProduct(AddProductRequest request) {
+        Category category = Optional.ofNullable(categoryRepository.findByName(request.getCategory().getName()))
+                .orElseGet(() ->categoryRepository.save(new Category(request.getCategory().getName())));
+        request.setCategory(category);
+        return productRepository.save(createProduct(request, category));
+    }
+
+
+    public Product createProduct(AddProductRequest request, Category category){
+        return new Product(
+                request.getName(),
+                request.getBrand(),
+                request.getPrice(),
+                request.getInventory(),
+                request.getDescription(),
+                category
+        );
     }
 
     @Override
