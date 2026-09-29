@@ -12,16 +12,14 @@ import java.util.List;
 @Setter
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.NONE)
     private Long id;
     private String name;
     private String brand;
     private BigDecimal price;
-    private int  inventory;
+    private int inventory;
 
     public Product(String name, String brand, BigDecimal price, int inventory, String description, Category category) {
         this.name = name;
@@ -33,8 +31,6 @@ public class Product {
     }
 
     private String description;
-
-    @JsonBackReference
     @ManyToOne(cascade = CascadeType.ALL)                                                  // Owing Side
     @JoinColumn(name= "category_id")                                                      // Physical Foreign Key
     @JsonIgnore
@@ -42,8 +38,5 @@ public class Product {
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Image> images;
-
-
 }
