@@ -4,6 +4,7 @@ import com.build.shopping.dto.ImageDto;
 import com.build.shopping.dto.ProductDto;
 import com.build.shopping.exception.ProductNotFoundException;
 import com.build.shopping.model.Category;
+import com.build.shopping.model.Image;
 import com.build.shopping.model.Product;
 import com.build.shopping.repository.CategoryRepository;
 import com.build.shopping.repository.ProductRepository;
