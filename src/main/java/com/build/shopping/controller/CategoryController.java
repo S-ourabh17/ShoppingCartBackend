@@ -32,6 +32,7 @@ public class CategoryController {
     }
 
 
+    @PostMapping("/add")
     public ResponseEntity<ApiResponse> addCategory(@RequestBody Category name){
         try{
             Category thecategory = categoryService.addCategory(name);
