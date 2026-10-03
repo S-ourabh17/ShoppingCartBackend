@@ -70,7 +70,7 @@ public class ImageController {
         try {
             Image image = imageService.getImageById(imageId);
             if (image != null) {
-                imageService.deleteById(imageId);
+                imageService.deleteImageById(imageId);
                 return ResponseEntity.ok(new ApiResponse("Delete success", null));
             }
         }
