@@ -23,7 +23,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("${api.prefix}/image")
+@RequestMapping("${api.prefix}/images")
 public class ImageController {
     private final IImageService imageService;
 
