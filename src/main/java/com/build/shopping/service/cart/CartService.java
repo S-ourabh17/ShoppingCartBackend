@@ -2,6 +2,7 @@ package com.build.shopping.service.cart;
 
 import com.build.shopping.exception.ResourceNotFoundException;
 import com.build.shopping.model.Cart;
+import com.build.shopping.model.CartItem;
 import com.build.shopping.repository.CartItemRepository;
 import com.build.shopping.repository.CartRepository;
 import lombok.AllArgsConstructor;
