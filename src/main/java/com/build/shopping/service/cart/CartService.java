@@ -22,7 +22,7 @@ public class CartService implements ICartService{
     public Cart getCart(Long id) {
         Cart cart = cartRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Cart not found"));
-        BigDecimal totalAmount =  cart.getTotalAmount();
+        BigDecimal totalAmount =  cart.getItems().stream().map(CartItem::getTotalPrice).reduce(BigDecimal.ZERO, BigDecimal::add);
         cart.setTotalAmount(totalAmount);
         return cartRepository.save(cart);
     }
