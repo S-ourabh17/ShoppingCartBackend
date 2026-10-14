@@ -3,6 +3,7 @@ package com.build.shopping.controller;
 
 import com.build.shopping.exception.ResourceNotFoundException;
 import com.build.shopping.model.Cart;
+import com.build.shopping.model.User;
 import com.build.shopping.response.ApiResponse;
 import com.build.shopping.service.cart.CartItemService;
 import com.build.shopping.service.cart.CartService;
