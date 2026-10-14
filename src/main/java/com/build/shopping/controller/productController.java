@@ -156,7 +156,7 @@ public class productController {
     }
 
 
-    @GetMapping("/products/count/by-brand/and-name")
+    @GetMapping("/product/count/by-brand/and-name")
     public ResponseEntity<ApiResponse> countProductsByBrandAndName(@RequestParam String brand, @RequestParam String name){
         try{
             var productCount = productService.countProductsByBrandAndName(brand, name);
