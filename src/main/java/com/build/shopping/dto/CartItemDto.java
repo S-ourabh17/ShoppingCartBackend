@@ -1,5 +1,7 @@
 package com.build.shopping.dto;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 
 public class CartItemDto {
