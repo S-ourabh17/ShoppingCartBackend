@@ -27,7 +27,7 @@ public class Cart {
 
 
     @OneToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id")                                                  //ParentEntity
     private User user;
 
 
