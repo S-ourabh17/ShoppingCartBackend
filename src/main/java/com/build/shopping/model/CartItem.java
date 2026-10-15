@@ -25,7 +25,7 @@ public class CartItem {
 
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "product_id")                                                       // Physical Foreign Key
     private Product product;
 
     @JsonIgnore
