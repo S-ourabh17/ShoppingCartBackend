@@ -54,6 +54,7 @@ public class CartItemController {
 
 
     @PutMapping("/cart/{cartId}/item/{itemId}/update")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ApiResponse> updateCartItemQuantity(@PathVariable Long cartId, @PathVariable Long itemId, @RequestParam Integer quantity){
         try {
             cartItemService.updateItemQuantity(cartId, itemId, quantity);
