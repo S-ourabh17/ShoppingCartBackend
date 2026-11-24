@@ -25,6 +25,7 @@ public class CartItemController {
     private final CartItemService cartItemService;
     private final IUserService userService;
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("item/add")
     public ResponseEntity<ApiResponse> addItemToCart( @RequestParam(required = false) Long productId, @RequestParam Integer quantity){
         try {
