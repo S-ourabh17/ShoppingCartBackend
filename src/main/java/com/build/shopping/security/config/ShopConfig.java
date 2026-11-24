@@ -25,6 +25,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import java.util.List;
 
 @Configuration
+@RequiredArgsConstructor
+@EnableMethodSecurity
 public class ShopConfig {
 
     private final ShopUserDetailsService userDetailsService;
