@@ -6,7 +6,6 @@ import com.build.shopping.model.CartItem;
 import com.build.shopping.model.User;
 import com.build.shopping.repository.CartItemRepository;
 import com.build.shopping.repository.CartRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
