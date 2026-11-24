@@ -47,9 +47,13 @@ public class CartService implements ICartService{
     }
 
     @Override
-    public Long initializeCart() {
-        Cart newCart = new Cart();
-        return cartRepository.save(newCart).getId();
+    public Cart initializeCart(User user) {
+        return Optional.ofNullable(getCartByUserId(user.getId()))
+                .orElseGet(() -> {
+                    Cart cart = new Cart();
+                    cart.setUser(user);
+                    return cartRepository.save(cart);
+                });
     }
 
     @Override
