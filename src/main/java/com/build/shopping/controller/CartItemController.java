@@ -35,6 +35,8 @@ public class CartItemController {
             return ResponseEntity.ok(new ApiResponse("Add Item Successfully", null));
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.status(NOT_FOUND).body(new ApiResponse(e.getMessage(), null));
+        }catch(JwtException e){
+            return ResponseEntity.status(UNAUTHORIZED).body(new ApiResponse(e.getMessage(), null));
         }
 
     }
