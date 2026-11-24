@@ -42,6 +42,7 @@ public class CartItemController {
     }
 
     @DeleteMapping("/cart/{cartId}/item/{productId}/remove")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<ApiResponse> removeItemFromCart(@PathVariable Long cartId, @PathVariable Long itemId){
         try {
             cartItemService.removeItemFromCart(cartId, itemId);
