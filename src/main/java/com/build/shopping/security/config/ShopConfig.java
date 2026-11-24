@@ -1,4 +1,4 @@
-package com.build.shopping.config;
+package com.build.shopping.security.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
