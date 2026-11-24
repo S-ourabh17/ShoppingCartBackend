@@ -25,10 +25,9 @@ public class CartItemController {
     @PostMapping("item/add")
     public ResponseEntity<ApiResponse> addItemToCart( @RequestParam(required = false) Long productId, @RequestParam Integer quantity){
         try {
-            if(cartId == null) {
-                cartId  = cartService.initializeCart();
-            }
-            cartItemService.addItemToCart(cartId, productId, quantity);
+            User user = userService.getAuthenticatedUser();
+            Cart cart  = cartService.initializeCart(user);
+            cartItemService.addItemToCart(cart.getId(), productId, quantity);
             return ResponseEntity.ok(new ApiResponse("Add Item Successfully", null));
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.status(NOT_FOUND).body(new ApiResponse(e.getMessage(), null));
