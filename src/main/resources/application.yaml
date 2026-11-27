@@ -12,14 +12,15 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
     database: mysql
-    database-platform: org.hibernate.dialect.MySQLDialect
+
 api:
   prefix: /api/v1
+
 
 
 
@@ -30,8 +31,9 @@ security:
       expiration: 86400000
 logging:
   level:
-    org.hibernate.sql: DEBUG
-    org.hibernate.orm.jdbc.blind: TRACE
+    com.build.shopping: debug
+    org.springframework.security: debug
+    org.springframework.web: debug
 
 
 
